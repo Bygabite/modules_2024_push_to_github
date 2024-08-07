@@ -22,3 +22,4 @@ print_letter_counter('welcome', 'e')
 print_letter_counter(text='Welcome', letter='e')
 print_letter_counter(text='e', letter='Welcome')
 
+print_letter_count('Search here', letter='a')
