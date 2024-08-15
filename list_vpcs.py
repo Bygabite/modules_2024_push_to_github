@@ -8,13 +8,12 @@ def get_vpc_information(client, filter=[]):
 def get_vpc_name(client, filter=[]):
     response = ec2.describe_vpcs(Filters=filters)
     for vpc in response["Vpcs"]:
-    if "Tags" in vpc:
-       for tag in vpc["Tags"]:
-           if "Name" == tag['Key']:
-                print(tag["Value"])
+        if "Tags" in vpc:
+            for tag in vpc["Tags"]:
+                if "Name" == tag['Key']:
+                        print(tag["Value"])
 
 if _name_ =='_main_':
-
     ec2 = boto3.client('ec2')
 
 
